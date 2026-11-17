@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 10.203.228.107:8848
+        namespace: e8f591a5-3e06-454b-bdea-39293878e9a6
+        group: ddd-jdk8
+      config:
+        # 配置中心地址
+        server-addr: 10.203.228.107:8848
+        namespace: e8f591a5-3e06-454b-bdea-39293878e9a6
+        group: ddd-jdk8
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - data-id: application.yml
+            group: ddd-jdk8
+            refresh: true
